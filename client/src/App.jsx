@@ -288,9 +288,20 @@ function App() {
         <div id="builder-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 border-t border-slate-200 dark:border-white/5 bg-slate-50/50 dark:bg-slate-950/50">
             <div className="flex items-center justify-between mb-12">
                 <div><h2 className="text-3xl font-bold text-slate-900 dark:text-white">Data Entry</h2><p className="text-slate-500">Define your resources constraints</p></div>
-               <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => handleGenerate(true)} disabled={generating} className={`hidden md:flex items-center gap-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-[length:200%_auto] hover:bg-right transition-all duration-500 text-white px-5 py-2.5 rounded-xl font-medium shadow-xl shadow-indigo-900/20 ring-1 ring-white/10 ${generating ? 'opacity-70 cursor-wait' : ''}`}>
-              {generating ? <><span className="animate-spin mr-1"></span> Generating...</> : <><Icons.Generate /> <span className="hidden lg:inline">Generate</span></>}
-            </motion.button>
+             <motion.button 
+  whileHover={{ scale: 1.05 }} 
+  whileTap={{ scale: 0.95 }} 
+  onClick={() => handleGenerate(true)} 
+  disabled={generating} 
+  // CHANGED: Removed 'hidden md:flex' and replaced with just 'flex'
+  className={`flex items-center gap-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-[length:200%_auto] hover:bg-right transition-all duration-500 text-white px-5 py-2.5 rounded-xl font-medium shadow-xl shadow-indigo-900/20 ring-1 ring-white/10 ${generating ? 'opacity-70 cursor-wait' : ''}`}
+>
+  {generating ? (
+    <><span className="animate-spin mr-1"></span> Generating...</>
+  ) : (
+    <><Icons.Generate /> <span className="inline">Generate</span></>
+  )}
+</motion.button>
             </div>
 
             <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
@@ -451,9 +462,20 @@ function App() {
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center justify-center py-24 border border-dashed border-slate-300 dark:border-slate-800 rounded-3xl bg-slate-50 dark:bg-slate-900/20">
                     <div className="w-24 h-24 bg-white dark:bg-slate-800/50 rounded-full flex items-center justify-center mb-6 shadow-inner border border-slate-100 dark:border-white/5"><span className="text-4xl opacity-50 grayscale">📅</span></div>
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Ready to Schedule</h3>
-                   <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => handleGenerate(true)} disabled={generating} className={`hidden md:flex items-center gap-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-[length:200%_auto] hover:bg-right transition-all duration-500 text-white px-5 py-2.5 rounded-xl font-medium shadow-xl shadow-indigo-900/20 ring-1 ring-white/10 ${generating ? 'opacity-70 cursor-wait' : ''}`}>
-              {generating ? <><span className="animate-spin mr-1"></span> Generating...</> : <><Icons.Generate /> <span className="hidden lg:inline">Generate</span></>}
-            </motion.button>
+                  <motion.button 
+  whileHover={{ scale: 1.05 }} 
+  whileTap={{ scale: 0.95 }} 
+  onClick={() => handleGenerate(true)} 
+  disabled={generating} 
+  // CHANGED: Removed 'hidden md:flex' and replaced with just 'flex'
+  className={`flex items-center gap-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-[length:200%_auto] hover:bg-right transition-all duration-500 text-white px-5 py-2.5 rounded-xl font-medium shadow-xl shadow-indigo-900/20 ring-1 ring-white/10 ${generating ? 'opacity-70 cursor-wait' : ''}`}
+>
+  {generating ? (
+    <><span className="animate-spin mr-1"></span> Generating...</>
+  ) : (
+    <><Icons.Generate /> <span className="inline">Generate</span></>
+  )}
+</motion.button>
                     <p className="text-slate-500 text-center max-w-md">Add your teachers, rooms, and subjects above, then click the <span className="text-indigo-600 dark:text-indigo-400 font-medium"> Generate </span> button to let AI create the perfect timetable.</p>
                 </motion.div>
             )}

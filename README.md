@@ -42,24 +42,31 @@ Follow these steps to set up the project on your machine.
 * [Node.js](https://nodejs.org/) (v14 or higher)
 * [MongoDB](https://www.mongodb.com/try/download/community) (Installed and running locally)
 
-🔮 Future Improvements[ ] Drag-and-drop manual adjustments for the schedule.[ ] PDF Export functionality.[ ] "Soft Constraints" (e.g., teachers prefer mornings).
-🤝 ContributingContributions are welcome! Please fork the repository and create a pull request.
-📄 LicenseThis project is open-source and available under the MIT License.
+*🔮 Future Improvements[ ] Drag-and-drop manual adjustments for the schedule.[ ] PDF Export functionality.[ ] "Soft Constraints" (e.g., teachers prefer mornings).
+
+*🤝 ContributingContributions are welcome! Please fork the repository and create a pull request.
+
+*📄 LicenseThis project is open-source and available under the MIT License.
 
 
 ### 1. Clone the Repository
 ```bash
 git clone [https://github.com/your-username/timetable-generator.git](https://github.com/your-username/timetable-generator.git)
 cd timetable-generator
+
 2. Setup the Backend (Server)Bashcd server
 npm install
+
 # Start the backend server
 node server.js
-The server will run on http://localhost:50003. Setup the Frontend (Client)Open a new terminal window:Bashcd client
+The server will run on http://localhost:50003. Setup the Frontend (Client)
+Open a new terminal window:Bashcd client
 npm install
 # Start the React app
 npm run dev
-The app will run on http://localhost:5173🧠 How the AI WorksThis project does not use generative AI (like ChatGPT). Instead, it implements a Symbolic AI approach known as a Constraint Satisfaction Problem (CSP) Solver.The geneticEngine.js logic follows these steps:Initialization: It maps all subjects to their specific teachers.Constraint Filtering: Before placing a class, it filters rooms based on student capacity.Heuristic Search: It attempts to place classes in time slots while checking for Hard Constraints:Is the teacher already teaching at this time?Is the room already occupied?Is the class capacity valid?Optimization: It iterates through days and times (Mon-Fri) until a valid slot is found for every required weekly hour.📂 Project StructureBashTimeTableProject/
+The app will run on http://localhost:5173
+
+📂 Project StructureBashTimeTableProject/
 ├── client/                 # React Frontend
 │   ├── src/
 │   │   ├── components/     # UI Components (Input, Auth)
@@ -72,3 +79,4 @@ The app will run on http://localhost:5173🧠 How the AI WorksThis project does 
 │   ├── server.js           # API Routes & Auth Logic
 │   └── package.json
 │
+└── README.md

@@ -14,9 +14,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Connect DB
-mongoose.connect('mongodb://127.0.0.1:27017/timetable_db')
-  .then(() => console.log('MongoDB Connected'))
+// Connect DB mongoose.connect('mongodb://127.0.0.1:27017/timetable_db')  .then(() => console.log('MongoDB Connected'))  .catch(err => console.log(err));
+
+mongoose.connect('mongodb+srv://abijithc140_db_user:L0kMa6rdZNdz6tBy@timetable.worfebw.mongodb.net/?appName=Timetable')
+  .then(() => console.log('Cloud MongoDB Connected'))
   .catch(err => console.log(err));
 
 const auth = (req, res, next) => {

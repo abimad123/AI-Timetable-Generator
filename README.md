@@ -42,11 +42,11 @@ Follow these steps to set up the project on your machine.
 * [Node.js](https://nodejs.org/) (v14 or higher)
 * [MongoDB](https://www.mongodb.com/try/download/community) (Installed and running locally)
 
-*🔮 Future Improvements[ ] Drag-and-drop manual adjustments for the schedule.[ ] PDF Export functionality.[ ] "Soft Constraints" (e.g., teachers prefer mornings).
+🔮 Future Improvements[ ] Drag-and-drop manual adjustments for the schedule.[ ] PDF Export functionality.[ ] "Soft Constraints" (e.g., teachers prefer mornings).
 
-*🤝 ContributingContributions are welcome! Please fork the repository and create a pull request.
+🤝 ContributingContributions are welcome! Please fork the repository and create a pull request.
 
-*📄 LicenseThis project is open-source and available under the MIT License.
+📄 LicenseThis project is open-source and available under the MIT License.
 
 
 ### 1. Clone the Repository

@@ -1,3 +1,5 @@
+require('dotenv').config(); 
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -15,8 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect DB mongoose.connect('mongodb://127.0.0.1:27017/timetable_db')  .then(() => console.log('MongoDB Connected'))  .catch(err => console.log(err));
-
-mongoose.connect('mongodb+srv://abijithc140_db_user:L0kMa6rdZNdz6tBy@timetable.worfebw.mongodb.net/?appName=Timetable')
+mongoose.connect(process.env.MONGO_URI) 
   .then(() => console.log('Cloud MongoDB Connected'))
   .catch(err => console.log(err));
 

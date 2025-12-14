@@ -1,0 +1,144 @@
+/* App.css */
+body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  color: #4facfe;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  background: #2d2d2d;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.card-header {
+  background: #333;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid #444;
+  display: flex;
+  justify-content: space-between;
+}
+
+.badge {
+  background: #4facfe;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Inputs */
+input {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #252525;
+  color: white;
+}
+
+/* Buttons */
+.btn-add {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-add:hover { background: #0056b3; }
+
+.btn-generate {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: #000;
+  font-weight: bold;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 30px;
+  box-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
+}
+
+.action-area { text-align: center; }
+
+/* Lists */
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  max-height: 150px;
+  overflow-y: auto;
+  border-top: 1px solid #444;
+}
+.item-list li {
+  padding: 8px;
+  border-bottom: 1px solid #444;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Schedule Table */
+.schedule-container {
+  margin-top: 40px;
+  background: #2d2d2d;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.day-group { margin-bottom: 30px; }
+
+.day-title {
+  color: #4facfe;
+  border-bottom: 2px solid #4facfe;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.schedule-table th, .schedule-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+.schedule-table th { color: #888; }
